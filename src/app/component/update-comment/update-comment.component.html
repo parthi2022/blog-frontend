@@ -1,0 +1,34 @@
+<div class="container">
+    <br>
+  
+  <button class="btn btn-primary float-end ">Logout</button>
+<div class="jumbotron">
+  <h1 class="display-4">Update Comment</h1>
+   <p class="lead">
+    <a class="btn btn-primary btn-sm" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
+    <a class="btn btn-primary btn-sm" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
+    <a class="btn btn-primary btn-sm" href="/manage-users" role="button">Manage Users</a>&nbsp;
+  </p>
+</div>
+<br><br>
+
+<h3>Update Post</h3>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Comment Id</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter post Id" value="{{comment.commentId}}" readonly  required #commentId>
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Post Comment</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter post Content" rows="3"  required #content>{{comment.content}}</textarea>
+  </div>
+  
+<div class="mb-3">
+    
+    <button type="Submit" class="btn btn-primary" (click)="updateComment(commentId.value,content.value)">Update Comment</button>&nbsp;
+    <button type="Reset" class="btn btn-secondary">Reset</button>
+  </div>
+<br>
+</div>
+
+

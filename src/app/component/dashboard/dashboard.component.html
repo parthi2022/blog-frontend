@@ -1,0 +1,19 @@
+<div class="container">
+    <br>
+    
+    <button class="btn btn-primary float-end " (click)="logout()">Logout</button>
+<div class="jumbotron">
+    <h1 class="display-4">Welcome User</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
+      <a class="btn btn-primary btn-lg" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
+      <a class="btn btn-primary btn-lg" href="/manage-users" role="button" *ngIf="userRole=='ADMIN'">Manage Users</a>&nbsp;
+    </p>
+  </div>
+  <br><br><br>
+  <br><br><br>
+  <br>
+</div>

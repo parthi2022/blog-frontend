@@ -1,0 +1,83 @@
+<div class="container">
+<br/>
+<h2>USER SIGNUP</h2>
+
+    <fieldset>
+      <div id="legend">
+        <legend class="">Please fill out the form to get registered!!</legend>
+      </div>
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label"  for="username">User Id</label>
+        <div class="controls">
+          <input type="number" id="userid" name="userid" placeholder="Enter your user id" class="input-xlargez" #userId>
+          
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label"  for="username">Username</label>
+        <div class="controls">
+          <input type="text" id="username" name="username" placeholder="Enter your username" class="input-xlarge" #userName>
+         
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label"  for="username">Date of Birth</label>
+        <div class="controls">
+          <input type="date" id="dob" name="dob" placeholder="" class="input-xlarge" #dob>
+         
+        </div>
+      </div>
+
+
+      <div class="control-group">
+        <!-- E-mail -->
+        <label class="control-label" for="email">E-mail</label>
+        <div class="controls">
+          <input type="email" id="email" name="email" placeholder="Enter your email" class="input-xlarge" #email>
+          
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Password-->
+        <label class="control-label" for="password">Password</label>
+        <div class="controls">
+          <input type="password" id="password" name="password" placeholder="Set Password" class="input-xlarge" #password>
+         
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Password -->
+        <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+        <div class="controls">
+          <input type="password" id="password_confirm" name="password_confirm" placeholder="Retype Password" class="input-xlarge" #repassword>
+          
+        </div>
+      </div>
+
+      <div class="control-group">
+        <!-- Username -->
+        <label class="control-label"  for="username">Bio</label>
+        <div class="controls">
+          <textarea rows="6" cols="40" type="text" id="about" name="about" placeholder="Enter your bio" class="input-xlarge" #about></textarea>
+          
+        </div>
+      </div>
+   
+      <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-primary" type="submit" (click)="saveUser(userId.value, userName.value, dob.value, email.value, password.value, repassword.value, about.value)">Sign up</button>
+        </div>
+      </div>
+    </fieldset>
+ 
+</div>
+<br>

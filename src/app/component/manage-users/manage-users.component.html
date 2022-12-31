@@ -1,0 +1,42 @@
+<div class="container">
+  <br>
+  
+  <button class="btn btn-primary float-end ">Logout</button>
+<div class="jumbotron">
+  <h1 class="display-4">Manage Users</h1>
+   <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
+    <a class="btn btn-primary btn-lg" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
+    <a class="btn btn-primary btn-lg" href="/manage-users" role="button">Manage Users</a>&nbsp;
+  </p>
+</div>
+<br><br>
+
+<button type="button" class="btn btn-primary btn-sm">Add Post</button> &nbsp;
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Post Id</th>
+      <th scope="col">Image</th>
+      <th scope="col">Title</th>
+      <th scope="col">Creation Date</th>
+      <th scope="col">Updation Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts">
+      <th scope="row">{{post.postId}}</th>
+      <td>  <img class="card-img-top" src="data:image/png;base64,{{post.postImage}}" height="30px" alt="Card image cap"></td>
+      <td>{{post.postTitle}}</td>
+      <td>{{post.postCreation}}</td>
+      <td> {{post.postUpdation}}</td>
+      <td>
+        <button type="button" class="btn btn-primary btn-sm">Update</button> &nbsp;
+        <button type="button" class="btn btn-secondary btn-sm">Delete</button></td>
+    </tr>
+    
+  </tbody>
+</table>
+
+</div>

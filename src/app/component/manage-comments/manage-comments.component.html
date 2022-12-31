@@ -1,0 +1,41 @@
+<div class="container">
+    <br>
+    
+    <button class="btn btn-primary float-end " (click)="logout()">Logout</button>
+<div class="jumbotron">
+    <h1 class="display-4">Manage Comments</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-sm" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
+      <a class="btn btn-primary btn-sm" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
+      <a class="btn btn-primary btn-sm" href="/manage-users" role="button">Manage Users</a>&nbsp;
+    </p>
+  </div>
+  <br><br>
+ 
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Post Title</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of comments">
+        
+        <td>{{comment.commentId}}</td>
+        <td>{{comment.content}}</td>
+        <td>{{comment.post.postTitle}}</td>
+        <td> <a href="/update-comment/{{comment.commentId}}">  <button type="button" class="btn btn-primary btn-sm">Update</button> </a>&nbsp;
+          <button type="button" class="btn btn-secondary btn-sm"  (click)="deleteComment(comment.commentId)">Delete</button>
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+ </div>

@@ -1,0 +1,23 @@
+
+<br/>
+<div class="container">
+  <h2>{{postTitle}} related post</h2>
+  <br>
+<div class="row">    
+
+
+  <div class="card" style="width: 13rem;" *ngFor="let post of posts">
+    <img class="card-img-top" src="data:image/png;base64,{{post.postImage}} " alt="Card image cap">
+    <div class="card-body">
+      <h6 class="card-title">{{post.postTitle}}</h6>
+     <p>{{post.postContent | slice : 0 :40 }}...</p>
+     <a href="/post/{{post.postId}}" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+
+  
+  
+ 
+</div>
+</div>
+<br/>

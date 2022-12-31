@@ -1,0 +1,51 @@
+<div class="container">
+    <br>
+  
+  <button class="btn btn-primary float-end ">Logout</button>
+<div class="jumbotron">
+  <h1 class="display-4">Update Post</h1>
+   <p class="lead">
+    <a class="btn btn-primary btn-sm" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
+    <a class="btn btn-primary btn-sm" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
+    <a class="btn btn-primary btn-sm" href="/manage-users" role="button">Manage Users</a>&nbsp;
+  </p>
+</div>
+<br><br>
+
+<h3>Update Post</h3>
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Post Id</label>
+    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Enter post Id" value="{{singlePost.postId}}" readonly  required #postId>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Post Title</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter post title" required value="{{singlePost.postTitle}}" #title>
+  </div>  
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Post Content</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter post Content" rows="3"  required #content>{{singlePost.postContent}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Post Image</label>
+    <input type="file" accept="image/*" name="image" (change)="handleFileInput($event)" class="form-control" id="exampleFormControlInput1" placeholder="Enter post title" required #image>
+  </div> 
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Category</label>
+    <select class="form-select" aria-label="Default select example" required #categoryId>
+        
+        <option value="1">Trending</option>
+        <option value="2">Technology</option>
+        <option value="3">Sport</option>
+        <option value="4">Health</option>
+        <option value="5">Crime</option>
+      </select>
+</div>
+<div class="mb-3">
+    
+    <button type="Submit" class="btn btn-primary" (click)="updatePost(postId.value,title.value,content.value,categoryId.value)">Update Post</button>&nbsp;
+    <button type="Reset" class="btn btn-secondary">Reset</button>
+  </div>
+<br>
+</div>
+
+
