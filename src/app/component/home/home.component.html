@@ -1,12 +1,18 @@
 <div class="container mt-3" >
   
-    <h2>NEWS TODAY</h2>
-    <div class="mt-4 p-5 bg-primary text-white rounded">
-      <h1>PARTHIBAN S</h1> 
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p> 
+    <h1><strong><em>NEWS TODAY</em></strong></h1>
+    <div class="mt-4 p-5 bg-primary text-white rounded"
+    style="background-image: url('assets/background-img.jpg');
+    height: 400px;height:200px;
+    ">
+     <h1><strong><em>PARTHIBAN S</em></strong></h1> 
+      <p style="color:rgb(255, 255, 255);background-color:rgba(10, 10, 10, 0.462);"><strong><em><h5>ENROLLMENT NUMBER = EONFWL631699 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INSTITUTION = Edu-Bridge Learning Pvt.ltd.<br><br>
+        BATCH:2022-7905&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COURSES = Java Full Stack 
+      </h5></em></strong></p> 
     </div>
   </div>
 <br/>
+
 <div class="container">
     
 <div class="row">    
@@ -15,8 +21,8 @@
   <div class="card" style="width: 15rem;" *ngFor="let post of posts">
     <img class="card-img-top" src="data:image/png;base64,{{post.postImage}}" alt="Card image cap">
     <div class="card-body">
-      <h6 class="card-title">{{post.postTitle}}</h6>
-     <p>{{post.postContent | slice : 0 :40 }}...</p>
+      <h6 class="card-title"><strong>{{post.postTitle}}</strong></h6>
+     <p>{{post.postContent | slice : 0 :50 }}...</p>
       <a href="/post/{{post.postId}}" class="btn btn-primary">Read More</a>
     </div>
     

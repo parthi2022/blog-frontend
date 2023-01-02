@@ -16,6 +16,9 @@ export class UpdatePostComponent {
   target:any;
   postId:any;
   singlePost:any;
+
+  userRole:any=localStorage.getItem("userRole");
+  loginStatus:any=localStorage.getItem("loginStatus");
   constructor(private router:Router, private service:PostapiService, private activatedRoute:ActivatedRoute)
   {
     this.postId = this.activatedRoute.snapshot.params['postId'];
@@ -40,6 +43,13 @@ export class UpdatePostComponent {
     this.target = event.target as HTMLInputElement;
     this.files = this.target.files as FileList;
     //console.log(this.files);
+    
+  }
+
+  logout()
+  {
+    localStorage.clear();
+    this.router.navigate(['signin']);
     
   }
 }

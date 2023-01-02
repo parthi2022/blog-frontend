@@ -15,7 +15,8 @@ export class AddPostComponent {
   fileToUpload: any;
   files:any;
   target:any;
-
+  userRole:any=localStorage.getItem("userRole");
+  loginStatus:any=localStorage.getItem("loginStatus");
   constructor(private router:Router, private service:PostapiService)
   {
 

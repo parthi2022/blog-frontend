@@ -7,7 +7,7 @@
    <p class="lead">
     <a class="btn btn-primary btn-sm" href="/manage-posts" role="button">Manage Posts</a>&nbsp;
     <a class="btn btn-primary btn-sm" href="/manage-comments" role="button">Manage Comments</a>&nbsp;
-    <a class="btn btn-primary btn-sm" href="/manage-users" role="button">Manage Users</a>&nbsp;
+    <a class="btn btn-primary btn-sm" href="/manage-users" role="button" *ngIf="userRole=='ADMIN'">Manage Users</a>&nbsp;
   </p>
 </div>
 <br><br>

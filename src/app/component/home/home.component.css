@@ -1,6 +1,6 @@
 .card {
  
-    border: 5px solid rgb(8, 8, 8);
+    border: 10px solid rgb(8, 8, 8);
    
 }
 
@@ -9,3 +9,7 @@ img, svg {
     height: 100px;
     
 }
+
+
+
+

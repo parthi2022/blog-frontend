@@ -1,0 +1,33 @@
+<br>
+<div id="content" class="container">
+    
+    <div class="panel panel-default">
+    <div class="panel-body">
+        <h6 class="nomargin"> 
+            About 1 result <small class="text-success"> </small>
+        </h6>
+        <hr class="nomargin-bottom margin-top-10">
+        <!-- SEARCH RESULTS -->
+        <div class="clearfix search-result" *ngIf="post"><!-- item -->
+            <h4><a href="/single-post/{{post.postId}}">{{post.postTitle}}</a></h4>
+            <small class="text-success">www.techblog.com</small>
+            <p><b>Author :</b> {{post.user.userName}}</p>
+            <p>{{post.postContent}}</p>
+        </div><!-- /item -->
+    
+        <div class="clearfix search-result" *ngIf="!post"><!-- item -->
+            <h4>No post found!!</h4>
+        
+        </div><!-- /item -->
+      
+    
+        <br><br><br><br><br><br>   
+        <br>  
+        <!-- PAGINATION -->
+       
+        <!-- /PAGINATION -->
+    </div>
+    </div>
+    
+    </div>
+<br>

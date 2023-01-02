@@ -8,22 +8,36 @@ import { PostapiService } from 'src/app/service/postapi.service';
   styleUrls: ['./manage-users.component.css']
 })
 export class ManageUsersComponent {
-  posts:any;
+  users:any;
+
+  loginStatus:any=localStorage.getItem("loginStatus");
+  userRole:any=localStorage.getItem("userRole");
   constructor(private service:PostapiService,private router:Router)
   {
-    this.service.getAllPosts().subscribe(
+    this.service.getAllUsers().subscribe(
       response => {
         console.log(response);
-        this.posts=response;
+        this.users=response;
       }
     );
 
   }
+
+  deleteUser(userId:any)
+  {
+    alert(userId);
+    this.service.deleteUserById(userId).subscribe(
+      response => { alert(response.message);
+      window.location.reload();
+      }
+    );
+  }
+
+
   logout()
   {
     localStorage.clear();
     this.router.navigate(['signin']);
     
   }
-
 }

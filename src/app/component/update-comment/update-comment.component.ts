@@ -11,10 +11,12 @@ import { PostapiService } from '../../service/postapi.service';
 export class UpdateCommentComponent {
   comment:any;
   commentId:any;
+  userRole:any=localStorage.getItem("userRole");
+  loginStatus:any=localStorage.getItem("loginStatus");
   constructor(private router:Router, private service:PostapiService, private activatedRoute:ActivatedRoute)
   {
     this.commentId = this.activatedRoute.snapshot.params['commentId'];
-    alert(this.commentId);
+    //alert(this.commentId);
     this.service.getCommentBycommentId(this.commentId).subscribe(
       (response) =>{this.comment=response; console.log(response);}
     );
@@ -25,11 +27,23 @@ export class UpdateCommentComponent {
   {
     this.comment=new Comment(commentId,content);
     this.service.updateComment(this.comment).subscribe(
-     response =>{console.log(response);}
+     response =>{console.log(response);
+      alert('comment updated!!');
+      this.router.navigate(['manage-comments']);
+    }
     );
 
     console.log(this.comment);
   
   }
 
+  logout()
+  {
+    localStorage.clear();
+    this.router.navigate(['signin']);
+    
+  }
+
 }
+
+

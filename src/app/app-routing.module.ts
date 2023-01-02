@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddPostComponent } from './component/add-post/add-post.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { HomeComponent } from './component/home/home.component';
+import { ManageCategoryComponent } from './component/manage-category/manage-category.component';
 import { ManageCommentsComponent } from './component/manage-comments/manage-comments.component';
 import { ManagePostsComponent } from './component/manage-posts/manage-posts.component';
 import { ManageUsersComponent } from './component/manage-users/manage-users.component';
 import { PostSearchComponent } from './component/post-search/post-search.component';
 import { PostsCategoryComponent } from './component/posts-category/posts-category.component';
+import { SearchResultComponent } from './component/search-result/search-result.component';
 import { SigninComponent } from './component/signin/signin.component';
 import { SignupComponent } from './component/signup/signup.component';
 import { SinglePostComponent } from './component/single-post/single-post.component';
@@ -75,7 +77,14 @@ const routes: Routes = [
   path : 'update-comment/:commentId',
   component: UpdateCommentComponent
  },
-
+ {
+  path : 'search-result',
+  component: SearchResultComponent
+ },
+ {
+  path : 'manage-Category',
+  component: ManageCategoryComponent
+ }
 
 
 

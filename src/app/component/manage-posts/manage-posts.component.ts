@@ -11,7 +11,7 @@ export class ManagePostsComponent {
   
   posts:any;
   userRole:any=localStorage.getItem("userRole");
-  
+  loginStatus:any=localStorage.getItem("loginStatus");
   userId:any=Number(localStorage.getItem("userId"));
   constructor(private service:PostapiService,private router:Router)
   {
