@@ -3,7 +3,7 @@ export class User
   public userId:number ;
   public userName:string;
   public userPassword:string;
-  public email:string;
+  public userEmail:string;
   public dob:Date;
   public about:string;
   public role:string;
@@ -13,7 +13,7 @@ export class User
   {
     this.userId=userId;
     this.userName=userName;
-    this.email=email;
+    this.userEmail=email;
     this.userPassword=userPassword;
     this.dob=dob;
     this.about=about;
